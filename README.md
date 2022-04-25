@@ -2,14 +2,14 @@
 
 ## usersテーブル
 
-| Column                | Type   | Options                   |
-| --------------------- | ------ | ------------------------- |
-| nickname              | string | null: false               |
-| email                 | string | null: false, unique: true |
-| encypted_password     | string | null: false               |
-| name                  | string | null: false               |
-| name_kana             | string | null: false               |
-| birthday              | string | null: false               |
+| Column                | Type     | Options                   |
+| --------------------- | -------- | ------------------------- |
+| nickname              | string   | null: false               |
+| email                 | string   | null: false, unique: true |
+| encypted_password     | string   | null: false               |
+| name                  | string   | null: false               |
+| name_kana             | string   | null: false               |
+| birthday              | datetime | null: false               |
 
 
 ### Association
@@ -27,7 +27,7 @@
 | condition_id    | integer    | null: false                    |
 | category_id     | integer    | null: false                    |
 | delivery_fee_id | integer    | null: false                    |
-| seller_area_id  | integer    | null: false                    |
+| prefecture_id   | integer    | null: false                    |
 | shipment_day_id | integer    | null: false                    |
 
 ### Association
@@ -50,12 +50,12 @@
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
 | postal_code   | string     | null: false                    |
-| prefecture    | string     | null: false                    |
 | city          | string     | null: false                    |
 | address       | string     | null: false                    |
 | building_name | string     |                                |
 | phone_number  | string     | null: false                    |   
 | purchase      | references | null: false, foreign_key: true |
+| prefecture_id | integer    | null: false                    |
 
 ### Association
 - belongs_to :purchase
