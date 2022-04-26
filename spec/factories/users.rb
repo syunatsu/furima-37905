@@ -2,6 +2,7 @@ FactoryBot.define do
   factory :user do
     transient do
       person { Gimei.name }
+    end
 
     nickname              {Faker::Name.initials(number: 4)}
     email                 {Faker::Internet.free_email}
