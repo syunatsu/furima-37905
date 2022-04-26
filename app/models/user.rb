@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates :password, format: { with: VALID_PASSWORD_REGEX }
   validates :nickname, presence: true
   validates :last_name, :first_name, presence: true, 
-             format: { with: /\A[ぁ-んァ-ヶ一-龥々]+\z/ }
+             format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
   validates :last_name_kana, :first_name_kana, presence: true, 
              format: { with: /\A[ァ-ヶー－]+\z/ }
   validates :birthday, presence: true
