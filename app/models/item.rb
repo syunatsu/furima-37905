@@ -9,4 +9,5 @@ class Item < ApplicationRecord
   validates :shipment_id, presence: true
   # validates :image presence: true??
 
+  belongs_to :user
 end
