@@ -32,7 +32,7 @@ RSpec.describe Item, type: :model do
       it 'priceが小数の値では出品できない' do
         @item.price = 300.1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price must be an integer")
+        expect(@item.errors.full_messages).to include('Price must be an integer')
       end
       it 'priceの値が300未満では出品できない' do
         @item.price = 299
