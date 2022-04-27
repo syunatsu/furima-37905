@@ -1,8 +1,8 @@
 class Item < ApplicationRecord
-  validates :name, presence: true
+  validates :name, presence: true, length: { maximum: 40 }
   validates :price, presence: true, numericality: { greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999},
-            format: {with: /^[0-9]+$/ }
-  validates :description, presence: true
+            format: {with: /\A[0-9]+\z/ }
+  validates :description, presence: true, length: { maximum: 1000 }
   validates :condition_id, presence: true, numericality: { other_than: 1, message: '---以外を選択してください'}
   validates :category_id, presence: true, numericality: { other_than: 1, message: '---以外を選択してください'}
   validates :delivery_fee_id, presence: true, numericality: { other_than: 1, message: '---以外を選択してください'}
