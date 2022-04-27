@@ -13,8 +13,8 @@ class Item < ApplicationRecord
   private
   # 画像のバリデーションメソッド
   def validate_image
-    unless item.image.attached?
-      errors.add(:imaage, 'の画像を１枚添付してください')
+    unless self.image.attached?
+      errors.add(:image, 'を１枚添付してください')
     end
   end
 
