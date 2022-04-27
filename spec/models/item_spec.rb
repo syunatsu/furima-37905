@@ -9,7 +9,7 @@ RSpec.describe Item, type: :model do
     context '商品を出品できる時' do
       it 'name, price, description, condition_id, category_id, delivery_id, prefecture_id, shipment_day_id, image
           の全てが正しく入力されていれば商品を出品できる' do
-        expect(@item).to be_balid
+        expect(@item).to be_valid
       end
     end
 
