@@ -36,7 +36,7 @@
 - belongs_to :user
 - has_one :purchase
 
-## purchaseテーブル
+## ordersテーブル
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true | 
@@ -47,7 +47,7 @@
 - belongs_to: item
 - has_one :destination
 
-## destinationテーブル
+## destinationsテーブル
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
