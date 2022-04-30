@@ -1,7 +1,6 @@
 class OrderDestination
   include ActiveModel::Model
-  attr_accessor :user_id, :item_id, :postal_code, :city, :address, :building_name, :phone_number, :order_id, :prefecture_id,
-                :token
+  attr_accessor :user_id, :item_id, :postal_code, :city, :address, :building_name, :phone_number, :prefecture_id, :token
 
   # バリデーションを記述
   with_options presence: true do
