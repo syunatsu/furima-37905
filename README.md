@@ -36,7 +36,7 @@
 - belongs_to :user
 - has_one :purchase
 
-## purchaseテーブル
+## ordersテーブル
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true | 
@@ -47,7 +47,7 @@
 - belongs_to: item
 - has_one :destination
 
-## destinationテーブル
+## destinationsテーブル
 
 | Column        | Type       | Options                        |
 | ------------- | ---------- | ------------------------------ |
@@ -56,10 +56,10 @@
 | address       | string     | null: false                    |
 | building_name | string     |                                |
 | phone_number  | string     | null: false                    |   
-| purchase      | references | null: false, foreign_key: true |
+| order         | references | null: false, foreign_key: true |
 | prefecture_id | integer    | null: false                    |
 
 ### Association
-- belongs_to :purchase
+- belongs_to :order
 
 
