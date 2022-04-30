@@ -30,7 +30,7 @@ RSpec.describe OrderDestination, type: :model do
     it 'postal_codeが「3桁ハイフン4桁」の半角文字列以外では購入できない' do
       @order_destination.postal_code = '1111111'
       @order_destination.valid?
-      expect(@order_destination.errors.full_messages).to include("Postal code is invalid. Include hyphen(-)")
+      expect(@order_destination.errors.full_messages).to include('Postal code is invalid. Include hyphen(-)')
     end
     it 'cityが空では購入できない' do
       @order_destination.city = ''
@@ -50,12 +50,12 @@ RSpec.describe OrderDestination, type: :model do
     it 'phone_numberが10桁以上11桁以内の半角数値以外では購入できない（10桁未満の値を検証）' do
       @order_destination.phone_number = '123456789'
       @order_destination.valid?
-      expect(@order_destination.errors.full_messages).to include("Phone number must be 10 digits or more and 11 digits or less")
+      expect(@order_destination.errors.full_messages).to include('Phone number must be 10 digits or more and 11 digits or less')
     end
     it 'phone_numberが10桁以上11桁以内の半角数値以外では購入できない（11桁を超える値を検証）' do
       @order_destination.phone_number = '012345678901'
       @order_destination.valid?
-      expect(@order_destination.errors.full_messages).to include("Phone number must be 10 digits or more and 11 digits or less")
+      expect(@order_destination.errors.full_messages).to include('Phone number must be 10 digits or more and 11 digits or less')
     end
     it 'prefecture_idが空では購入できない' do
       @order_destination.prefecture_id = ''
