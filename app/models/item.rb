@@ -3,11 +3,11 @@ class Item < ApplicationRecord
   validates :price, numericality: { only_integer: true, greater_than_or_equal_to: 300, less_than_or_equal_to: 9_999_999 },
                     format: { with: /\A[0-9]+\z/ }
   validates :description, presence: true, length: { maximum: 1000 }
-  validates :condition_id, presence: true, numericality: { other_than: 1, message: "can't be blank" }
-  validates :category_id, presence: true, numericality: { other_than: 1, message: "can't be blank" }
-  validates :delivery_fee_id, presence: true, numericality: { other_than: 1, message: "can't be blank" }
-  validates :prefecture_id, presence: true, numericality: { other_than: 1, message: "can't be blank" }
-  validates :shipment_day_id, presence: true, numericality: { other_than: 1, message: "can't be blank" }
+  validates :condition_id, presence: true, numericality: { other_than: 1, message: "を入力してください" }
+  validates :category_id, presence: true, numericality: { other_than: 1, message: "を入力してください" }
+  validates :delivery_fee_id, presence: true, numericality: { other_than: 1, message: "を入力してください" }
+  validates :prefecture_id, presence: true, numericality: { other_than: 1, message: "を入力してください" }
+  validates :shipment_day_id, presence: true, numericality: { other_than: 1, message: "を入力してください" }
   validate :validate_image # 画像のバリデーション
 
   private
